@@ -1,0 +1,21 @@
+//This file is a scratch pad to determine how to do univariate division
+
+//Declare a ring with lex ordering.
+//ring r = 0,(x),lp;
+
+//Univaraite division algorithm f/g  = qg+r, returns q and r
+proc univariateDivision(f,g)
+{
+	poly q;
+	poly rem = f;
+	int i = 0;
+
+	while(rem != 0 && (leadmonom(g) <= leadmonom(rem)))
+	{
+		q = q + lead(rem)/lead(g);
+      		rem = rem - (lead(rem)/lead(g))*g;
+      		i = i+1;
+  	}
+	return(list(q,rem));
+}
+

@@ -1,0 +1,12 @@
+//This file is a scratch pad to determine how to do univariate division
+
+//Declare a ring with lex ordering.
+ring r = 0,(x),lp;
+
+//Declare two polys you wnat to divide;
+poly f1 = x3+2x2+2x+8;
+poly f2 = 2x2+3x+1;
+
+poly q;
+poly r;
+

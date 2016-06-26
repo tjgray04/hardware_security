@@ -1,0 +1,5 @@
+
+proc univariateDivision(poly q, poly d)
+{
+	return(lead(q));
+}
